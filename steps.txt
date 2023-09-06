@@ -1,0 +1,36 @@
+1. display "title"
+    - streamlit --> title
+2. Add text box below title for user
+    - streamlit --> selectbox
+3. On the above box, we want to show movies list
+    - using pickle, we dump our movies name project file "movie_list.pkl"
+4. Add button "recommend"
+    - streamlit --> button
+    - fetch multiple movie names => dump file "similarity.pkl"
+5. Append movies in recommend list
+6. Final, we need posters of the movies
+    - We use movies_id to fetch movie posters
+    - fetch posters from API
+    - tmdb -> API Key (copy1) => tmdb API -> movies -> get details API (copy2) => google -> paste2
+        -- In this link, <api key> -> paste1 => Enter -> copy3
+    - Google -> JSON viewer -> text - paste3 => Veiwer -> poster_path - copy4
+7. Display posters
+    - streamlit -> layout your app
+
+
+### ---- For Deployment ---- ###
+
+- Make "procfile"
+    => To run the streamlit app on "heroku", we have to use this code
+- Make "setup.sh"
+    => Contains OS related commands --> making directories for setup
+- Make "gitignore"
+    => venv
+- A list of all libraries which are required for this project to run on the server (heroku libraries)
+    => Our project code editor terminal -> pip freeze > requirements.txt
+
+
+### Important terminal commands:-
+
+- To run your program --> streamlit run <your_file_name>
+- Installing every library at once --> python -m requirements.txt
